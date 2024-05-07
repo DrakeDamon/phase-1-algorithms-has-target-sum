@@ -1,17 +1,42 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i <array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
+
+
 /* 
-  Write the Big O time complexity of your function here
+O(n2)
 */
 
 /* 
-  Add your pseudocode here
-*/
+FUNCTION hasTargetSum(nummbers, target);
+FOR each index i from 0 i+1 to length of numbers;
+IF numbers[i] + numbers[j] EQUALS target:
+RETURN true
+RETURN false*/
 
+/* TEST CASES
+Multiple Pairs Summing to Target:
+Input: [1, 2, 3, 4, 5], Target: 6
+Expected Output: true (because 1+5 and 2+4 both add up to 6)
+No Pairs Summing to Target:
+Input: [1, 2, 3, 4, 5], Target: 10
+Expected Output: false (no two numbers add up to 10)
+Edge Case - Empty Array:
+Input: [], Target: 5
+Expected Output: false (no elements to add up)
+Edge Case - Single Element:
+Input: [5], Target: 5
+Expected Output: false (a single element cannot form a pair)
 /*
-  Add written explanation of your solution here
+it should take in an array function and a target integer so if any 2 numbers add together to the target number then the function will return true
 */
 
 // You can run `node index.js` to view these console logs
